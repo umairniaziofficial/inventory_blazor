@@ -1,0 +1,11 @@
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\bin\Debug\net7.0\inventory_blazor.Shared.deps.json
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\bin\Debug\net7.0\inventory_blazor.Shared.dll
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\bin\Debug\net7.0\inventory_blazor.Shared.pdb
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\inventory_blazor.Shared.GeneratedMSBuildEditorConfig.editorconfig
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\inventory_blazor.Shared.AssemblyInfoInputs.cache
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\inventory_blazor.Shared.AssemblyInfo.cs
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\inventory_blazor.Shared.csproj.CoreCompileInputs.cache
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\inventory_blazor.Shared.dll
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\refint\inventory_blazor.Shared.dll
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\inventory_blazor.Shared.pdb
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Shared\obj\Debug\net7.0\ref\inventory_blazor.Shared.dll

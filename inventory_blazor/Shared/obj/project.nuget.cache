@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "vHPJcq3OUGjgyYlFilh8jS7SNMC9rgx4rLuUKzPDMsv135NnAVPYqJlDZ9OS/69bdqLRa84ux+mxQDf4TzZqwA==",
+  "success": true,
+  "projectFilePath": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Shared\\inventory_blazor.Shared.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Nizzy\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\7.0.19\\microsoft.windowsdesktop.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\Nizzy\\.nuget\\packages\\microsoft.netcore.app.ref\\7.0.19\\microsoft.netcore.app.ref.7.0.19.nupkg.sha512",
+    "C:\\Users\\Nizzy\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\7.0.19\\microsoft.aspnetcore.app.ref.7.0.19.nupkg.sha512"
+  ],
+  "logs": []
+}
