@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|solutionrelative:inventory_blazor\\client\\pages\\components\\listing\\productsinfo.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{AFAB8809-6615-490F-AA7E-8D0DFC72AB3E}|inventory_blazor\\Shared\\inventory_blazor.Shared.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\shared\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AFAB8809-6615-490F-AA7E-8D0DFC72AB3E}|inventory_blazor\\Shared\\inventory_blazor.Shared.csproj|solutionrelative:inventory_blazor\\shared\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\client\\pages\\components\\listing\\listingheader.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|solutionrelative:inventory_blazor\\client\\pages\\components\\listing\\listingheader.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -17,10 +21,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\client\\pages\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|solutionrelative:inventory_blazor\\client\\pages\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AFAB8809-6615-490F-AA7E-8D0DFC72AB3E}|inventory_blazor\\Shared\\inventory_blazor.Shared.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\shared\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AFAB8809-6615-490F-AA7E-8D0DFC72AB3E}|inventory_blazor\\Shared\\inventory_blazor.Shared.csproj|solutionrelative:inventory_blazor\\shared\\models\\category.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AFAB8809-6615-490F-AA7E-8D0DFC72AB3E}|inventory_blazor\\Shared\\inventory_blazor.Shared.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\shared\\weatherforecast.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -66,7 +66,7 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ListingHeader.razor",
               "DocumentMoniker": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Components\\Listing\\ListingHeader.razor",
               "RelativeDocumentMoniker": "inventory_blazor\\Client\\Pages\\Components\\Listing\\ListingHeader.razor",
@@ -79,7 +79,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Category.razor",
               "DocumentMoniker": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Category.razor",
               "RelativeDocumentMoniker": "inventory_blazor\\Client\\Pages\\Category.razor",
@@ -92,7 +92,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Brand.razor",
               "DocumentMoniker": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Brand.razor",
               "RelativeDocumentMoniker": "inventory_blazor\\Client\\Pages\\Brand.razor",
@@ -105,7 +105,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Category.cs",
               "DocumentMoniker": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Shared\\Models\\Category.cs",
               "RelativeDocumentMoniker": "inventory_blazor\\Shared\\Models\\Category.cs",
@@ -124,7 +124,7 @@
               "RelativeDocumentMoniker": "inventory_blazor\\Client\\Pages\\Components\\Listing\\ProductsInfo.razor",
               "ToolTip": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Components\\Listing\\ProductsInfo.razor",
               "RelativeToolTip": "inventory_blazor\\Client\\Pages\\Components\\Listing\\ProductsInfo.razor",
-              "ViewState": "AQIAABoAAAAAAAAAAAAAADIAAABIAAAA",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAqwCwAAAAhAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-05-22T16:42:26.22Z",
               "EditorCaption": ""
