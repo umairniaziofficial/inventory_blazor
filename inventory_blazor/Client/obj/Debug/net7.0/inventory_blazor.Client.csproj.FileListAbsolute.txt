@@ -833,3 +833,4 @@ D:\Coding\Visual\inventory_blazor\inventory_blazor\Client\obj\Debug\net7.0\inven
 D:\Coding\Visual\inventory_blazor\inventory_blazor\Client\obj\Debug\net7.0\refint\inventory_blazor.Client.dll
 D:\Coding\Visual\inventory_blazor\inventory_blazor\Client\obj\Debug\net7.0\inventory_blazor.Client.pdb
 D:\Coding\Visual\inventory_blazor\inventory_blazor\Client\obj\Debug\net7.0\ref\inventory_blazor.Client.dll
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Client\obj\Debug\net7.0\inventory_blazor.Client.sourcelink.json

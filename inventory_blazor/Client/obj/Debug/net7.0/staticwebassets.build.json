@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "B7YZvv+VXFSea9OmaKqif1E/9UJonqnu+uy8F9e2xYI=",
+  "Hash": "2gsTLP9foxfBW57Dt4/c1yXeA00S/g/He2RQISgCrWs=",
   "Source": "inventory_blazor.Client",
   "BasePath": "/",
   "Mode": "Root",
@@ -8033,6 +8033,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\icon-192.png"
+    },
+    {
+      "Identity": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\logo.svg",
+      "SourceId": "inventory_blazor.Client",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "images/logo.svg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\logo.svg"
     },
     {
       "Identity": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\index.html",

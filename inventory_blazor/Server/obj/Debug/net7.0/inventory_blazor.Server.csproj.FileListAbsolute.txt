@@ -53,3 +53,4 @@ D:\Coding\Visual\inventory_blazor\inventory_blazor\Server\obj\Debug\net7.0\refin
 D:\Coding\Visual\inventory_blazor\inventory_blazor\Server\obj\Debug\net7.0\inventory_blazor.Server.pdb
 D:\Coding\Visual\inventory_blazor\inventory_blazor\Server\obj\Debug\net7.0\inventory_blazor.Server.genruntimeconfig.cache
 D:\Coding\Visual\inventory_blazor\inventory_blazor\Server\obj\Debug\net7.0\ref\inventory_blazor.Server.dll
+D:\Coding\Visual\inventory_blazor\inventory_blazor\Server\obj\Debug\net7.0\inventory_blazor.Server.sourcelink.json

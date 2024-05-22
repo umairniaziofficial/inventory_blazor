@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\logo.svg",
+      "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
       "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
