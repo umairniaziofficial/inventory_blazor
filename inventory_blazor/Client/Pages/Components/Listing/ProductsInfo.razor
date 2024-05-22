@@ -1,25 +1,42 @@
+@using inventory_blazor.Shared.Models
 
-    <div class="w-full productItem " data-product-name="<%= product.pname %>">
-        <div class="w-[90%] mx-auto rounded-lg bg-[#1e1f23] text-[#adadad] flex mt-12 text-center h-16 items-center shadow-lg hover:contrast-125 transition ease-in-out duration-300 cursor-pointer">
-            <h5 class="w-[18%]">product.pid</h5>
-            <h5 class="w-[18%]">product.pname</h5>
-            <h5 class="w-[18%]">product.p_stock</h5>
-            <h5 class="w-[18%]">product.added_date </h5>
-            <h5 class="w-[18%]">product.price $</h5>
-            <h5 class="w-[18%]">product.category </h5>
-            <h5 class="w-[18%]">Store Addresss</h5>
-            <div class="w-[18%] flex justify-center items-center gap-2">
-                <form action="/edit/<%= product.pid %>" method="get">
-                    <button class="bg-[#33E67A] font-bold rounded-lg text-black px-3 text-xs py-1">
-                        Edit
-                    </button>
-                </form>
-                <form action="/delete/<%= product.pid %>" method="post">
-                    <button class="bg-[#33E67A] font-bold rounded-lg text-black px-3 text-xs py-1">
-                        Delete
-                    </button>
-                </form>
+@inject HttpClient HttpClient
+
+<div>
+    @if (products != null)
+    {
+        @foreach (var product in products)
+        {
+            <div class="w-full productItem" data-product-name="@product.Pname">
+                <div class="w-[90%] mx-auto rounded-lg bg-[#1e1f23] text-[#adadad] flex mt-12 text-center h-16 items-center shadow-lg hover:contrast-125 transition ease-in-out duration-300 cursor-pointer">
+                    <h5 class="w-[18%]">@product.Pid</h5>
+                    <h5 class="w-[18%]">@product.Pname</h5>
+                    <h5 class="w-[18%]">@product.PStock</h5>
+                    <h5 class="w-[18%]">@product.AddedDate.ToShortDateString()</h5>
+                    <h5 class="w-[18%]">$@product.Price</h5>
+                    <h5 class="w-[18%]">@product.Category</h5>
+                    <h5 class="w-[18%]">@product.Store.Address</h5> <!-- Assuming Store is a complex type within Product -->
+                    <div class="w-[18%] flex justify-center items-center gap-2">
+                        <a href="/edit/@product.Pid" class="bg-[#33E67A] font-bold rounded-lg text-black px-3 text-xs py-1">
+                            Edit
+                        </a>
+                        <form action="/delete/@product.Pid" method="post">
+                            <button type="submit" class="bg-[#33E67A] font-bold rounded-lg text-black px-3 text-xs py-1">
+                                Delete
+                            </button>
+                        </form>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
+        }
+    }
+</div>
 
+@code {
+    private List<Product>? products; // Marking as nullable using ? modifier
+
+    protected override async Task OnInitializedAsync()
+    {
+        products = await HttpClient.GetFromJsonAsync<List<Product>>("api/Product");
+    }
+}
