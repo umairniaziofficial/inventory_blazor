@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("inventory_blazor.Shared")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+62d3eb0fdb8cf77f3e06af66abfbb7eb25d9ba0d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c5385856da95e6e314acb127fbf407b20a18e422")]
 [assembly: System.Reflection.AssemblyProductAttribute("inventory_blazor.Shared")]
 [assembly: System.Reflection.AssemblyTitleAttribute("inventory_blazor.Shared")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
