@@ -69,8 +69,48 @@
       "PackagePath": "staticwebassets\\icon-192.png"
     },
     {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\About.svg",
+      "PackagePath": "staticwebassets\\images\\About.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\Banner.svg",
+      "PackagePath": "staticwebassets\\images\\Banner.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\LongCard.svg",
+      "PackagePath": "staticwebassets\\images\\LongCard.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\basketball.svg",
+      "PackagePath": "staticwebassets\\images\\basketball.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\icons\\insert.svg",
+      "PackagePath": "staticwebassets\\images\\icons\\insert.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\inventory.svg",
+      "PackagePath": "staticwebassets\\images\\inventory.svg"
+    },
+    {
       "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\logo.svg",
       "PackagePath": "staticwebassets\\images\\logo.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\product.svg",
+      "PackagePath": "staticwebassets\\images\\product.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\shirt.svg",
+      "PackagePath": "staticwebassets\\images\\shirt.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\shoes.svg",
+      "PackagePath": "staticwebassets\\images\\shoes.svg"
+    },
+    {
+      "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\images\\supplier.svg",
+      "PackagePath": "staticwebassets\\images\\supplier.svg"
     },
     {
       "Id": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\wwwroot\\index.html",

@@ -1,0 +1,16 @@
+@page "/brand"
+<div class="min-h-screen flex justify-center items-center">
+    <div class="p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
+        <h1 class="text-5xl text-white mb-8">Add Brand</h1>
+        <form action="/brand" method="POST" enctype="multipart/form-data" class="space-y-4 w-full max-w-md">
+                <div>
+                    <label for="pname" class="text-white mb-2">Enter new Brand name here:</label>
+                    <input type="text" id="pname" name="pname" required
+                      class="mt-3 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" />
+                </div>
+            <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
