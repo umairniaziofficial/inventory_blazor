@@ -29,5 +29,11 @@ namespace inventory_blazor.Shared.Interfaces
         Task AddProductAsync(Product product);
         Task UpdateProductAsync(Product product);
         Task DeleteProductAsync(int id);
+        Task<IEnumerable<User>> GetUsersAsync();
+        Task<User> GetUserByIdAsync(int id);
+        Task AddUserAsync(User user);
+        Task UpdateUserAsync(User user);
+        Task DeleteUserAsync(int id);
+        Task<User> GetUserByEmailAsync(string email);
     }
 }

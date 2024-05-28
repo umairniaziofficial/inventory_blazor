@@ -42,7 +42,7 @@ namespace inventory_blazor.Server.DataAccess
             var brand = await _context.Brands.FindAsync(id);
             if (brand == null)
             {
-                throw new Exception("Brand not found"); 
+                throw new Exception("Brand not found");
             }
 
             _context.Brands.Remove(brand);
@@ -64,7 +64,7 @@ namespace inventory_blazor.Server.DataAccess
             _context.Categories.Add(category);
             await _context.SaveChangesAsync();
         }
-        
+
 
         public async Task UpdateCategoryAsync(Category category)
         {
@@ -136,5 +136,36 @@ namespace inventory_blazor.Server.DataAccess
             _context.Products.Remove(product);
             await _context.SaveChangesAsync();
         }
+        public async Task AddUserAsync(User user)
+        {
+            _context.Users.Add(user);
+            await _context.SaveChangesAsync();
+        }
+      public async Task<IEnumerable<User>> GetUsersAsync()
+        {
+            return await _context.Users.ToListAsync();
+        }
+
+        public async Task<User> GetUserByIdAsync(int id)
+        {
+            return await _context.Users.FindAsync(id);
+        }
+
+        public async Task UpdateUserAsync(User user)
+        {
+            _context.Entry(user).State = EntityState.Modified;
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task DeleteUserAsync(int id)
+        {
+            var user = await _context.Users.FindAsync(id);
+            _context.Users.Remove(user);
+            await _context.SaveChangesAsync();
+        }
+        public async Task<User> GetUserByEmailAsync(string email)
+    {
+        return await _context.Users.FirstOrDefaultAsync(u => u.Email == email);
+    }
     }
 }

@@ -15,6 +15,7 @@ namespace inventory_blazor.Server.DataAccess
         public DbSet<Category> Categories { get; set; }
         public DbSet<Store> Stores { get; set; }
         public DbSet<Product> Products { get; set; }
+        public DbSet<User> Users { get; set; }  // Add this line
 
         // Override OnModelCreating to configure entity relationships and other model-specific settings
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,6 +26,7 @@ namespace inventory_blazor.Server.DataAccess
             modelBuilder.Entity<Category>().HasKey(c => c.Cid);
             modelBuilder.Entity<Store>().HasKey(s => s.Sid);
             modelBuilder.Entity<Product>().HasKey(p => p.Pid);
+            modelBuilder.Entity<User>().HasKey(u => u.Id);  // Add this line
 
             // Configure relationships if needed
             // For example:
@@ -51,6 +53,17 @@ namespace inventory_blazor.Server.DataAccess
             modelBuilder.Entity<Product>()
                 .Property(p => p.PStock)
                 .HasColumnName("p_stock");
+
+            // Additional configuration for User entity if needed
+            modelBuilder.Entity<User>()
+                .Property(u => u.Email)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            modelBuilder.Entity<User>()
+                .Property(u => u.Password)
+                .IsRequired()
+                .HasMaxLength(255);
         }
     }
 }
