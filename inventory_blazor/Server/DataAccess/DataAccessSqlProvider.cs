@@ -40,6 +40,11 @@ namespace inventory_blazor.Server.DataAccess
         public async Task DeleteBrandAsync(int id)
         {
             var brand = await _context.Brands.FindAsync(id);
+            if (brand == null)
+            {
+                throw new Exception("Brand not found"); // Or handle this case differently
+            }
+
             _context.Brands.Remove(brand);
             await _context.SaveChangesAsync();
         }

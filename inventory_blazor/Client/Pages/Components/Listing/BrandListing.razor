@@ -1,4 +1,5 @@
 @using inventory_blazor.Shared.Models
+@inject IJSRuntime JSRuntime
 @inject HttpClient HttpClient
 
 <div class="min-h-screen flex justify-center items-center">
@@ -7,26 +8,28 @@
         <form @onsubmit="AddBrand" class="space-y-4 w-full max-w-md">
             <div>
                 <label for="bname" class="text-white mb-2">Enter new Brand name here:</label>
-                <input type="text" id="bname" @bind="newBrand.Bname"
-                       class="mt-3 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" />
+                <input type="text" id="bname" @bind="newBrand.Bname" placeholder="Enter Brand Name"
+                    class="mt-3 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" />
             </div>
             <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">
                 Submit
             </button>
         </form>
         <div class="w-full">
-            <div class="w-full mx-auto rounded-lg bg-[#2f2f37] text-[#adadad] flex text-center mt-12 items-center shadow-lg py-3">
+            <div
+                class="w-full mx-auto rounded-lg bg-[#2f2f37] text-[#adadad] flex text-center mt-12 items-center shadow-lg py-3">
                 <h5 class="w-1/2">Brand ID</h5>
                 <h5 class="w-1/2">Brand Name</h5>
                 <h5 class="w-1/2">Action</h5>
             </div>
-            
+
             @if (brands != null && brands.Any())
             {
                 @foreach (var brand in brands)
                 {
                     <div class="w-full">
-                        <div class="w-full mx-auto rounded-lg bg-[#1e1f23] text-[#adadad] flex mt-4 text-center h-16 items-center shadow-lg hover:contrast-125 transition ease-in-out duration-300 cursor-pointer ">
+                        <div
+                            class="w-full mx-auto rounded-lg bg-[#1e1f23] text-[#adadad] flex mt-4 text-center h-16 items-center shadow-lg hover:contrast-125 transition ease-in-out duration-300 cursor-pointer ">
                             <h5 class="w-1/3">@brand.Bid</h5>
                             <h5 class="w-1/3">@brand.Bname</h5>
                             <div class="w-1/4 flex justify-center items-center gap-2">
@@ -35,8 +38,9 @@
                                         Edit
                                     </button>
                                 </form>
-                                <form action="/delete/@brand.Bid" method="post">
-                                    <button class="bg-[#33E67A] font-bold rounded-lg text-black px-3 text-xs py-1">
+                                <form @onsubmit="@(async () => await HandleDeleteSubmit(brand))">
+                                    <button type="submit" class="bg-[#33E67A] font-bold rounded-lg text-black px-3 text-xs py-1"
+                                        style="width:auto;">
                                         Delete
                                     </button>
                                 </form>
@@ -69,13 +73,26 @@
     {
         try
         {
-            await HttpClient.PostAsJsonAsync("api/Brand", newBrand);
+            var response = await HttpClient.PostAsJsonAsync("api/Brand", newBrand);
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"HTTP request failed with status code: {response.StatusCode}");
+                return;
+            }
+
             newBrand = new Brand();
-            brands = await HttpClient.GetFromJsonAsync<List<Brand>>("api/Brand"); 
+            brands = await HttpClient.GetFromJsonAsync<List<Brand>>("api/Brand");
         }
         catch (Exception ex)
         {
             Console.WriteLine($"Error adding brand: {ex.Message}");
         }
     }
+
+    private async Task HandleDeleteSubmit(Brand brandToDelete)
+    {
+        await JSRuntime.InvokeVoidAsync("deleteBrand", brandToDelete.Bid);
+    }
+
+    
 }

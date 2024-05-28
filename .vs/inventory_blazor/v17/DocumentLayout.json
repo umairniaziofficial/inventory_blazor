@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Coding\\Visual\\inventory_blazor\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\client\\pages\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|solutionrelative:inventory_blazor\\client\\pages\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Brand.razor",
+              "DocumentMoniker": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Brand.razor",
+              "RelativeDocumentMoniker": "inventory_blazor\\Client\\Pages\\Brand.razor",
+              "ToolTip": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Brand.razor",
+              "RelativeToolTip": "inventory_blazor\\Client\\Pages\\Brand.razor",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-05-28T06:59:28.028Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

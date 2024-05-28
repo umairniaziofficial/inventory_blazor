@@ -7,17 +7,19 @@
         <form @onsubmit="AddStore" class="space-y-4 w-full max-w-md">
             <div>
                 <label for="sname" class="text-white mb-2">Enter new Store name here:</label>
-                <input type="text" id="sname" @bind="newStore.Sname"
+                <input type="text" id="sname" @bind="newStore.Sname" placeholder="Enter Store Name"
                     class="mt-3 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" />
             </div>
             <div>
                 <label for="saddress" class="text-white mb-2">Enter Store Address here:</label>
                 <input type="text" id="saddress" @bind="newStore.Address"
+                    placeholder="Enter Store Address"
                     class="mt-3 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" />
             </div>
             <div>
                 <label for="mobno" class="text-white mb-2">Enter Store Phone Number here:</label>
                 <input type="text" id="mobno" @bind="newStore.Mobno"
+                 placeholder="Enter Store Pno"
                     class="mt-3 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" />
             </div>
             <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">

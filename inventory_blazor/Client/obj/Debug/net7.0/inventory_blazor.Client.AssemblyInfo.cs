@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("inventory_blazor.Client")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+84c0cd435dc69c601a9ed613ac0ca0bc08965967")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eefa3b4cea0330799d32057e01f5a798b8b15436")]
 [assembly: System.Reflection.AssemblyProductAttribute("inventory_blazor.Client")]
 [assembly: System.Reflection.AssemblyTitleAttribute("inventory_blazor.Client")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
