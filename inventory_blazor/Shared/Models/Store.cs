@@ -6,6 +6,6 @@ namespace inventory_blazor.Shared.Models
         public string Sname { get; set; }
         public string Address { get; set; }
         public string Mobno { get; set; }
-        public ICollection<Product> Products { get; set; }
+        public ICollection<Product> ?Products { get; set; }
     }
 }

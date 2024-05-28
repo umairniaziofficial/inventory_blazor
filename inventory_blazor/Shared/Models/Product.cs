@@ -10,7 +10,7 @@ namespace inventory_blazor.Shared.Models
         public int PStock { get; set; }
         public decimal Price { get; set; }
         public DateTime AddedDate { get; set; }
-        public string Image { get; set; }
+        public string? Image { get; set; }
 
         public Category Category { get; set; }
         public Brand Brand { get; set; }

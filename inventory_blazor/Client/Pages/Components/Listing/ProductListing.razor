@@ -1,0 +1,131 @@
+
+@using inventory_blazor.Shared.Models
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+
+<div class="min-h-screen flex justify-center items-center">
+    <div class="p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
+        <h1 class="text-5xl text-white mb-8">Product Listing</h1>
+
+        <form @onsubmit="AddProduct" class="space-y-4 w-full max-w-md">
+            <div>
+                <label for="categoryId" class="text-white">Category:</label>
+                <select id="categoryId" name="categoryId" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @onchange="OnCategorySelected">
+                    @foreach (var category in categories)
+                    {
+                        <option value="@category.Cid">@category.Category_name</option>
+                    }
+                </select>
+            </div>
+
+            <div>
+                <label for="brandId" class="text-white">Brand:</label>
+                <select id="brandId" name="brandId" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @onchange="OnBrandSelected">
+                    @foreach (var brand in brands)
+                    {
+                        <option value="@brand.Bid">@brand.Bname</option>
+                    }
+                </select>
+            </div>
+
+            <div>
+                <label for="storeId" class="text-white">Store:</label>
+                <select id="storeId" name="storeId" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @onchange="OnStoreSelected">
+                    @foreach (var store in stores)
+                    {
+                        <option value="@store.Sid">@store.Sname</option>
+                    }
+                </select>
+            </div>
+
+            <div>
+                <label for="productName" class="text-white">Product Name:</label>
+                <input type="text" id="productName" name="productName" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="newProduct.Pname" />
+            </div>
+
+            <div>
+                <label for="productStock" class="text-white">Stock Quantity:</label>
+                <input type="number" id="productStock" name="productStock" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="newProduct.PStock" />
+            </div>
+
+            <div>
+                <label for="productPrice" class="text-white">Price:</label>
+                <input type="number" id="productPrice" name="productPrice" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="newProduct.Price" />
+            </div>
+
+            <div>
+                <label for="addedDate" class="text-white">Added Date:</label>
+                <input type="date" id="addedDate" name="addedDate" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="newProduct.AddedDate" />
+            </div>
+
+            <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">
+                Submit
+            </button>
+        </form>
+    </div>
+</div>
+
+@code {
+    private List<Category> categories;
+    private List<Brand> brands;
+    private List<Store> stores;
+    private Product newProduct = new Product();
+    private List<Product> products;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await LoadData();
+    }
+
+    private async Task LoadData()
+    {
+        try
+        {
+            categories = await HttpClient.GetFromJsonAsync<List<Category>>("api/Category");
+            brands = await HttpClient.GetFromJsonAsync<List<Brand>>("api/Brand");
+            stores = await HttpClient.GetFromJsonAsync<List<Store>>("api/Store");
+            products = await HttpClient.GetFromJsonAsync<List<Product>>("api/Product");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving data: {ex.Message}");
+        }
+    }
+
+    private void OnCategorySelected(ChangeEventArgs e)
+    {
+        newProduct.Cid = Convert.ToInt32(e.Value);
+    }
+
+    private void OnBrandSelected(ChangeEventArgs e)
+    {
+        newProduct.Bid = Convert.ToInt32(e.Value);
+    }
+
+    private void OnStoreSelected(ChangeEventArgs e)
+    {
+        newProduct.Sid = Convert.ToInt32(e.Value);
+    }
+
+    private async Task AddProduct()
+    {
+        try
+        {
+            // Send the POST request with the complete Product object
+            var response = await HttpClient.PostAsJsonAsync("api/Product", newProduct);
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"HTTP request failed with status code: {response.StatusCode}");
+                return;
+            }
+
+            // Clear the form and reload data
+            newProduct = new Product();
+            await LoadData();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error adding product: {ex.Message}");
+        }
+    }
+}

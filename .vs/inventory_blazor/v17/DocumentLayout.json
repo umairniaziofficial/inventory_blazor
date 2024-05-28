@@ -3,8 +3,8 @@
   "WorkspaceRootPath": "D:\\Coding\\Visual\\inventory_blazor\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\client\\pages\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{204A469D-3ED2-4568-A7CE-485852617014}|inventory_blazor\\Client\\inventory_blazor.Client.csproj|solutionrelative:inventory_blazor\\client\\pages\\brand.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{AFAB8809-6615-490F-AA7E-8D0DFC72AB3E}|inventory_blazor\\Shared\\inventory_blazor.Shared.csproj|d:\\coding\\visual\\inventory_blazor\\inventory_blazor\\shared\\inventory_blazor.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{AFAB8809-6615-490F-AA7E-8D0DFC72AB3E}|inventory_blazor\\Shared\\inventory_blazor.Shared.csproj|solutionrelative:inventory_blazor\\shared\\inventory_blazor.shared.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -19,14 +19,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Brand.razor",
-              "DocumentMoniker": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Brand.razor",
-              "RelativeDocumentMoniker": "inventory_blazor\\Client\\Pages\\Brand.razor",
-              "ToolTip": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Client\\Pages\\Brand.razor",
-              "RelativeToolTip": "inventory_blazor\\Client\\Pages\\Brand.razor",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-05-28T06:59:28.028Z",
+              "Title": "inventory_blazor.Shared",
+              "DocumentMoniker": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Shared\\inventory_blazor.Shared.csproj",
+              "RelativeDocumentMoniker": "inventory_blazor\\Shared\\inventory_blazor.Shared.csproj",
+              "ToolTip": "D:\\Coding\\Visual\\inventory_blazor\\inventory_blazor\\Shared\\inventory_blazor.Shared.csproj",
+              "RelativeToolTip": "inventory_blazor\\Shared\\inventory_blazor.Shared.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAAEAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-05-28T14:52:17.96Z",
               "EditorCaption": ""
             }
           ]

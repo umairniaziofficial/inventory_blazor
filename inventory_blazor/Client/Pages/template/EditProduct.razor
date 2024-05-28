@@ -1,101 +1,105 @@
-@page "/edit/{productId}"
+@page "/edit-product/{id:int}"
 @using inventory_blazor.Shared.Models
+@using inventory_blazor.Client.Pages.Components.Home
+@using System.Net.Http.Json
 @inject HttpClient HttpClient
 @inject NavigationManager NavigationManager
-
-<NavBar />
-
-<div class="min-h-screen flex justify-center items-center py-12">
-    <div class="w-[90%] h-[90%] p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
+<NavBar/>
+<div class="min-h-screen flex justify-center items-center">
+    <div class="p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
         <h1 class="text-5xl text-white mb-8">Edit Product</h1>
 
-        @if (product != null)
-        {
-            <form @onsubmit="HandleSubmit" enctype="multipart/form-data" class="space-y-4 w-full max-w-md">
-                <div>
-                    <label for="cid" class="text-white">Category:</label>
-                    <select id="cid" name="cid" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none">
-                        @foreach (var category in categories)
-                        {
-                            <option value="@category.Cid">@category.Category_name</option>
-                        }
-                    </select>
-                </div>
+        <form @onsubmit="UpdateProduct" class="space-y-4 w-full max-w-md">
+            <div>
+                <label for="categoryId" class="text-white">Category:</label>
+                <select id="categoryId" name="categoryId" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.Cid">
+                    @foreach (var category in categories)
+                    {
+                        <option value="@category.Cid">@category.Category_name</option>
+                    }
+                </select>
+            </div>
 
-                <div>
-                    <label for="bid" class="text-white">Brand ID:</label>
-                    <select id="bid" name="bid" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none">
-                        @foreach (var brand in brands)
-                        {
-                            <option value="@brand.Bid">@brand.Bname</option>
-                        }
-                    </select>
-                </div>
+            <div>
+                <label for="brandId" class="text-white">Brand:</label>
+                <select id="brandId" name="brandId" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.Bid">
+                    @foreach (var brand in brands)
+                    {
+                        <option value="@brand.Bid">@brand.Bname</option>
+                    }
+                </select>
+            </div>
 
-                <div>
-                    <label for="sid" class="text-white">Store:</label>
-                    <select id="sid" name="sid" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none">
-                        @foreach (var store in stores)
-                        {
-                            <option value="@store.Sid">@store.Address</option>
-                        }
-                    </select>
-                </div>
+            <div>
+                <label for="storeId" class="text-white">Store:</label>
+                <select id="storeId" name="storeId" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.Sid">
+                    @foreach (var store in stores)
+                    {
+                        <option value="@store.Sid">@store.Sname</option>
+                    }
+                </select>
+            </div>
 
-                <div>
-                    <label for="pname" class="text-white">Product Name:</label>
-                    <input type="text" id="pname" name="pname" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.Pname" />
-                </div>
+            <div>
+                <label for="productName" class="text-white">Product Name:</label>
+                <input type="text" id="productName" name="productName" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.Pname" />
+            </div>
 
-                <div>
-                    <label for="p_stock" class="text-white">Stock Quantity:</label>
-                    <input type="number" id="p_stock" name="p_stock" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.PStock" />
-                </div>
+            <div>
+                <label for="productStock" class="text-white">Stock Quantity:</label>
+                <input type="number" id="productStock" name="productStock" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.PStock" />
+            </div>
 
-                <div>
-                    <label for="price" class="text-white">Price:</label>
-                    <input type="number" id="price" name="price" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.Price" />
-                </div>
+            <div>
+                <label for="productPrice" class="text-white">Price:</label>
+                <input type="number" id="productPrice" name="productPrice" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.Price" />
+            </div>
 
-                <div>
-                    <label for="added_date" class="text-white">Added Date:</label>
-                    <input type="date" id="added_date" name="added_date" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.AddedDate" />
-                </div>
+            <div>
+                <label for="addedDate" class="text-white">Added Date:</label>
+                <input type="date" id="addedDate" name="addedDate" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="product.AddedDate" />
+            </div>
 
-                <div>
-                    <label for="productImage" class="text-white">Product Image:</label>
-                    <input type="file" id="productImage" name="productImage" accept="image/*" class="mt-1" />
-                </div>
-
-                <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">
-                    Submit
-                </button>
-            </form>
-        }
-        else
-        {
-            <p>No product found.</p>
-        }
+            <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">
+                Save Changes
+            </button>
+        </form>
     </div>
 </div>
 
 @code {
-    private Product product;
-    private List<Category> categories;
-    private List<Store> stores;
-    private List<Brand> brands;
-    private int productId;
+    [Parameter] public int Id { get; set; }
+
+    private Product product = new Product();
+    private List<Category> categories = new List<Category>();
+    private List<Brand> brands = new List<Brand>();
+    private List<Store> stores = new List<Store>();
 
     protected override async Task OnInitializedAsync()
     {
-        productId = Convert.ToInt32(NavigationManager.Uri.Split('/').Last());
+        await LoadData();
+        await LoadProduct();
+    }
+
+    private async Task LoadData()
+    {
         try
         {
-            product = await HttpClient.GetFromJsonAsync<Product>($"api/Product/{productId}");
             categories = await HttpClient.GetFromJsonAsync<List<Category>>("api/Category");
-            stores = await HttpClient
-.GetFromJsonAsync<List<Store>>("api/store");
-            brands = await HttpClient.GetFromJsonAsync<List<Brand>>("api/brand");
+            brands = await HttpClient.GetFromJsonAsync<List<Brand>>("api/Brand");
+            stores = await HttpClient.GetFromJsonAsync<List<Store>>("api/Store");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving data: {ex.Message}");
+        }
+    }
+
+    private async Task LoadProduct()
+    {
+        try
+        {
+            product = await HttpClient.GetFromJsonAsync<Product>($"api/Product/{Id}");
         }
         catch (Exception ex)
         {
@@ -103,12 +107,18 @@
         }
     }
 
-    private async Task HandleSubmit()
+    private async Task UpdateProduct()
     {
         try
         {
-            await HttpClient.PutAsJsonAsync($"api/Product/{productId}", product);
-            NavigationManager.NavigateTo("/");
+            var response = await HttpClient.PutAsJsonAsync("api/Product", product);
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"HTTP request failed with status code: {response.StatusCode}");
+                return;
+            }
+
+            NavigationManager.NavigateTo("/products");
         }
         catch (Exception ex)
         {

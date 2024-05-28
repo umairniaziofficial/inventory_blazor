@@ -1,0 +1,70 @@
+@page "/edit-store/{id}"
+@using inventory_blazor.Shared.Models
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+
+<div class="min-h-screen flex justify-center items-center">
+    <div class="w-[90%] h-[90%] p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
+        <h1 class="text-5xl text-white mb-8">Edit Store</h1>
+        <form @onsubmit="UpdateStore" class="space-y-4 w-full max-w-md">
+            <div>
+                <label for="sid" class="text-white">Store ID:</label>
+                <input type="text" id="sid" name="sid" readonly class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="editedStore.Sid" />
+            </div>
+            <div>
+                <label for="sname" class="text-white">Store Name:</label>
+                <input type="text" id="sname" name="sname" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="editedStore.Sname" />
+            </div>
+            <div>
+                <label for="address" class="text-white">Address:</label>
+                <input type="text" id="address" name="address" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="editedStore.Address" />
+            </div>
+            <div>
+                <label for="mobno" class="text-white">Mobile Number:</label>
+                <input type="text" id="mobno" name="mobno" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="editedStore.Mobno" />
+            </div>
+            <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">
+                Update
+            </button>
+        </form>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    private Store editedStore = new Store();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            int storeId = int.Parse(Id);
+            editedStore = await HttpClient.GetFromJsonAsync<Store>($"api/Store/{storeId}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving store: {ex.Message}");
+        }
+    }
+
+    private async Task UpdateStore()
+    {
+        try
+        {
+            var response = await HttpClient.PutAsJsonAsync("api/Store", editedStore);
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"HTTP request failed with status code: {response.StatusCode}");
+                return;
+            }
+
+            NavigationManager.NavigateTo("/store");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating store: {ex.Message}");
+        }
+    }
+}

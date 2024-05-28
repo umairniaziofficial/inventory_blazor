@@ -42,7 +42,7 @@ namespace inventory_blazor.Server.DataAccess
             var brand = await _context.Brands.FindAsync(id);
             if (brand == null)
             {
-                throw new Exception("Brand not found"); // Or handle this case differently
+                throw new Exception("Brand not found"); 
             }
 
             _context.Brands.Remove(brand);
@@ -64,6 +64,7 @@ namespace inventory_blazor.Server.DataAccess
             _context.Categories.Add(category);
             await _context.SaveChangesAsync();
         }
+        
 
         public async Task UpdateCategoryAsync(Category category)
         {
