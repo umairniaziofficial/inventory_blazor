@@ -1,0 +1,62 @@
+@page "/edit-brand/{id}"
+@using inventory_blazor.Shared.Models
+@inject HttpClient HttpClient
+@inject NavigationManager NavigationManager
+
+<div class="min-h-screen flex justify-center items-center">
+    <div class="w-[90%] h-[90%] p-8 rounded-lg shadow-lg flex flex-col justify-center items-center">
+        <h1 class="text-5xl text-white mb-8">Edit Brand</h1>
+        <form @onsubmit="UpdateBrand" class="space-y-4 w-full max-w-md">
+            <div>
+                <label for="bid" class="text-white">Brand ID:</label>
+                <input type="text" id="bid" name="bid" readonly class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="editedBrand.Bid" />
+            </div>
+            <div>
+                <label for="bname" class="text-white">Brand Name:</label>
+                <input type="text" id="bname" name="bname" required class="mt-1 px-3 py-2 bg-[#41444d] text-white rounded-lg w-full outline-none" @bind="editedBrand.Bname" />
+            </div>
+            <button type="submit" class="bg-[#33e67a] hover:bg-[#30995a] text-black font-bold py-2 px-4 rounded w-full">
+                Update
+            </button>
+        </form>
+    </div>
+</div>
+
+@code {
+    [Parameter]
+    public string Id { get; set; }
+
+    private Brand editedBrand = new Brand();
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+            int brandId = int.Parse(Id);
+            editedBrand = await HttpClient.GetFromJsonAsync<Brand>($"api/Brand/{brandId}");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error retrieving brand: {ex.Message}");
+        }
+    }
+
+    private async Task UpdateBrand()
+    {
+        try
+        {
+            var response = await HttpClient.PutAsJsonAsync("api/Brand", editedBrand);
+            if (!response.IsSuccessStatusCode)
+            {
+                Console.WriteLine($"HTTP request failed with status code: {response.StatusCode}");
+                return;
+            }
+
+            NavigationManager.NavigateTo("/brand");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error updating brand: {ex.Message}");
+        }
+    }
+}

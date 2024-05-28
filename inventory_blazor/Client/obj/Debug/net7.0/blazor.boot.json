@@ -1,7 +1,7 @@
 {
   "entryAssembly": "inventory_blazor.Client",
   "resources": {
-    "hash": "sha256-kLgQwoTsVHiZP3WytxgvYU53VEDay9e6Y2gwymRXrOw=",
+    "hash": "sha256-Iw6NSULuuXJZlNOqhuY9AcPelIK5ryU0wVrqmBPe5G4=",
     "runtime": {
       "dotnet.7.0.19.5qwnai4tbg.js": "sha256-J9IVsSLjfEIyn/0XKSDWXHMve5eK11v9Aj06G7zPUYo=",
       "dotnet.timezones.blat": "sha256-kK6U8Vo/Xb8zgDH6JtdgAGSA6NUASHhvZoB+hINV0ms=",
@@ -231,11 +231,11 @@
       "netstandard.dll": "sha256-BvougKnccTedjRXZ+Ll94v1qqBt4cr0MqBVYFpGvYLA=",
       "System.Private.CoreLib.dll": "sha256-i0lh8QB6xhbEgqLyhh/0TaUFxAB3Iz2y0VH8m68TIdY=",
       "inventory_blazor.Shared.dll": "sha256-QICIZfqBXBBqky1xx2HixNcRTZ2Ovgu/eLT5Qpy4flU=",
-      "inventory_blazor.Client.dll": "sha256-ZY4hliupjKHSfqB12flCswqyi9NJ+E0OJPMkww3Mkkw="
+      "inventory_blazor.Client.dll": "sha256-QLK/XkLZ2W6e7S2mQYdZf2mg35yZXiIpw4oCMx6kZ+s="
     },
     "pdb": {
       "inventory_blazor.Shared.pdb": "sha256-SwYbFf+skGLXxyHraX5vh7XdmBx0uwrUPMfOapyqIR4=",
-      "inventory_blazor.Client.pdb": "sha256-nREWVJ3xvhp8klrDCYsud9mP6n7AqhnCqzEjp60Ahx0="
+      "inventory_blazor.Client.pdb": "sha256-pETGhI4pgTk+zVz3Y7cBC4QN+l1hZGaogS3wredwH78="
     },
     "runtimeAssets": {
       "dotnet.wasm": {

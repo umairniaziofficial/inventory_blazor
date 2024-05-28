@@ -33,15 +33,5 @@
     </div>
 
     <script src="_framework/blazor.webassembly.js"></script>
-    <script>
-      window.deleteBrand = async (id) => {
-        const response = await fetch(`/api/Brand/${id}`, { method: "DELETE" });
-        if (response.ok) {
-          location.reload(); // Reload the page to reflect the changes
-        } else {
-          alert("Failed to delete brand");
-        }
-      };
-    </script>
   </body>
 </html>
