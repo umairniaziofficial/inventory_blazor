@@ -1,5 +1,4 @@
 @using inventory_blazor.Shared.Models
-
 @inject HttpClient HttpClient
 
 <div>
@@ -44,7 +43,7 @@
     private List<Category> categories;
     private List<Store> stores;
 
-    protected override async Task OnInitializedAsync()
+    protected override async Task OnInitializedAsync()  
     {
         try
         {

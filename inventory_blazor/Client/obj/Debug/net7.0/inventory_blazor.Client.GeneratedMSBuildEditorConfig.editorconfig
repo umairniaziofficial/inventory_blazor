@@ -74,6 +74,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xIb21lXFRocmVlX1Byb2R1Y3RzLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/Coding/Visual/inventory_blazor/inventory_blazor/Client/Pages/Components/Listing/BrandListing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xMaXN0aW5nXEJyYW5kTGlzdGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Visual/inventory_blazor/inventory_blazor/Client/Pages/Components/Listing/CategoryListing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xMaXN0aW5nXENhdGVnb3J5TGlzdGluZy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/Coding/Visual/inventory_blazor/inventory_blazor/Client/Pages/Components/Listing/ListingHeader.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xMaXN0aW5nXExpc3RpbmdIZWFkZXIucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -84,6 +92,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [D:/Coding/Visual/inventory_blazor/inventory_blazor/Client/Pages/Components/Listing/SearchBar.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xMaXN0aW5nXFNlYXJjaEJhci5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/Coding/Visual/inventory_blazor/inventory_blazor/Client/Pages/Components/Listing/StoreListing.razor]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ29tcG9uZW50c1xMaXN0aW5nXFN0b3JlTGlzdGluZy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/Coding/Visual/inventory_blazor/inventory_blazor/Client/Pages/Components/Operations/Operation_cards.razor]
