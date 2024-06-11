@@ -4,6 +4,16 @@
 
 Delighted to unveil my latest endeavor: an **Inventory Management System** integrating Visual and Database elements. Featuring robust cookie-based authentication and tailored setups for localhost, PHPMyAdmin, and SQL server. 🚀
 
+
+
+- [Nizventory](#nizventory)
+  - [How to Run](#how-to-run)
+  - [Features](#features)
+  - [Contributions](#contributions)
+  - [GitHub Repositories Node Js](#github-repositories-node-js)
+  - [Author](#author)
+
+
 ## How to Run
 
 - Run these Querries to Create tables in sql server or built in sql.
@@ -44,10 +54,11 @@ Delighted to unveil my latest endeavor: an **Inventory Management System** integ
 
 ## Features
 
-- Generation of cookies stored in local storage.
-- No page redirection without authentication.
-- Easy setup process.
-- Image uploading functionality.
+- Single Page Application (SPA) 
+- Component-Based Architecture
+- C# and .NET Integration
+- SQL Server Integration
+- Foreign keys added
 
 ## Contributions
 
@@ -55,9 +66,9 @@ Feel free to fork this repository and contribute by adding the remaining pages f
 
 Feel the code's pulse, delve deeper, and contribute your magic! 🛠️
 
-## GitHub Repositories Blazor
+## GitHub Repositories Node Js
 
-- For C# Blazor Code, check out: [inventory_blazor](https://github.com/umairniaziofficial/inventory_blazor)
+- For Node js application: [Nizventory Node js with SQL Server + Phpmyadmin (localhost)](https://github.com/umairniaziofficial/nizventory_sql_node)
 
 Join the journey! 🌟
 
