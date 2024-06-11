@@ -2,7 +2,7 @@
 
 🎓 **Semester Projects Showcase!** 🎓
 
-Delighted to unveil my latest endeavor: an **Inventory Management System** integrating Visual and Database elements. Featuring robust cookie-based authentication and tailored setups for localhost, PHPMyAdmin, and SQL server. 🚀
+Delighted to unveil my latest endeavor: an **Inventory Management System with Blazor C#** integrating Visual and Database elements.  🚀
 
 
 
@@ -17,7 +17,7 @@ Delighted to unveil my latest endeavor: an **Inventory Management System** integ
 ## How to Run
 
 - Run these Querries to Create tables in sql server or built in sql.
-- 
+
   ```sql
     CREATE TABLE brands (
     bid INT IDENTITY(1,1) PRIMARY KEY,
